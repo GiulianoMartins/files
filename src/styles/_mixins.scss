@@ -1,0 +1,36 @@
+// _mixins.scss
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+@mixin background-size($size) {
+    -webkit-background-size: $size !important;
+    -moz-background-size: $size !important;
+    -o-background-size: $size !important;
+    background-size: $size !important;
+}
+
+@mixin clip-path($value){
+    -webkit-clip-path: $value;
+    -moz-clip-path: $value;
+    -o-clip-path: $value;
+    clip-path: $value;
+}
