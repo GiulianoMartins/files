@@ -11,23 +11,27 @@ $(document).ready(function(){
         hidePreloader();
     });
 
-    //$(function() {
-        //"use strict";
+    //    $(function() {
+    //     "use strict";
 
-        // var toggles = document.querySelectorAll(".c-hamburger");
+    //     var toggles = document.querySelectorAll(".c-hamburger");
 
-        // for (var i = toggles.length - 1; i >= 0; i--) {
-        //     var toggle = toggles[i];
-        //     toggleHandler(toggle);
-        // }
+    //     for (var i = toggles.length - 1; i >= 0; i--) {
+    //         var toggle = toggles[i];
+    //         toggleHandler(toggle);
+    //     };
 
-        // function toggleHandler(toggle) {
-        //     toggle.addEventListener( "click", function(e) {
-        //         e.preventDefault();
-        //         (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-        //     });
-        // }
-    //});
+    //     function toggleHandler(toggle) {
+    //         toggle.addEventListener( "click", function(e) {
+    //             e.preventDefault();
+    //             (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+    //         });
+    //     }
+    // });
+
+    $('.animated-icon1,.animated-icon3,.animated-icon4').click(function(){
+        $(this).toggleClass('open');
+    });
 
     var isMobile = {
         Android: function() {
@@ -124,17 +128,7 @@ $(document).ready(function(){
     $('.mask').click( function(){
 
         $('#video').get(0).play();       // get(0) gets the original DOM element
-        $('trabalhos .mask-hover').hide();
-        $('.mask').unbind('click');  // remove click listener
+        $('.trabalhos .mask-hover').css('opacity', '0');
         $('#video').attr('controls', 'true');
     });
 });
-
-
-
-
-
-
-
-
-

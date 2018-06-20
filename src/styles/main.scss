@@ -139,14 +139,19 @@ body{
                 opacity: 1;
                 background: none repeat scroll 0 0 transparent;
                 text-align: left;
-                transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-                display: grid;
+       //          transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+       //          display: grid;
 
-                align-items: center;
-    			justify-content: flex-start;
-    			padding-left: 12%;
+       //          align-items: center;
+    			// justify-content: center;
+    			// padding-left: 12%;
     			.text-top{
-    				width: 32%;
+    				
+				    width: 50%;
+				    padding-left: 4%;
+				    /* margin-top: -6%; */
+				    /* margin-bottom: 13%; */
+				        padding: 9% 0 13% 15%;
     				h2{
     				    font-family: 'Texta';
 					    font-size: 48px;
@@ -158,7 +163,7 @@ body{
 	    			}
     			}
     			.text-bottom{
-    				width: 67%;
+
     				h3{
 						color: $color-white;
 						font-weight: 600;
@@ -183,7 +188,7 @@ body{
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 15px;
-			padding: 2rem 17rem;
+			padding: 2rem 0;
 			div:last-child{
 				display: grid;
 				grid-template-columns:  .75fr 1fr 1fr;
@@ -310,7 +315,41 @@ body{
 			}
 		}
 	}
+.navbar .navbar-toggle:focus,
+.navbar .navbar-toggle:hover {
+    background-color: transparent;
+}
 
+.navbar .navbar-toggle {
+    border: none;
+}
+
+.navbar-toggle span.icon-bar {
+    transition: all 0.15s;
+}
+
+.navbar-toggle span:nth-child(2) {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggle span:nth-child(3) {
+    opacity: 0;
+}
+
+.navbar-toggle span:nth-child(4) {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggle.collapsed span:nth-child(2),
+.navbar-toggle.collapsed span:nth-child(4) {
+    transform: rotate(0);
+}
+
+.navbar-toggle.collapsed span:nth-child(3) {
+    opacity: 1;
+}
 	// .dobra1{
 	// 	font-size: 34px;
 	// 	letter-spacing: 1px;
@@ -363,6 +402,11 @@ body{
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 	body{
+
+		// .container {
+		//     max-width: 1140px;
+		//     padding: 0 12%;
+		// }
 	}
 }
 

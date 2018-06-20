@@ -508,19 +508,13 @@ body .projetos .mask .mask-hover {
   opacity: 1;
   background: none repeat scroll 0 0 transparent;
   text-align: left;
-  -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding-left: 12%;
 }
 body .projetos .mask .mask-hover .text-top {
-  width: 32%;
+  width: 50%;
+  padding-left: 4%;
+  /* margin-top: -6%; */
+  /* margin-bottom: 13%; */
+  padding: 9% 0 13% 15%;
 }
 body .projetos .mask .mask-hover .text-top h2 {
   font-family: 'Texta';
@@ -530,9 +524,6 @@ body .projetos .mask .mask-hover .text-top h2 {
 }
 body .projetos .mask .mask-hover .text-top h2 span {
   color: #4bd0ff;
-}
-body .projetos .mask .mask-hover .text-bottom {
-  width: 67%;
 }
 body .projetos .mask .mask-hover .text-bottom h3 {
   color: #ffffff;
@@ -553,7 +544,7 @@ body .escolha .plataform {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
-  padding: 2rem 17rem;
+  padding: 2rem 0;
 }
 body .escolha .plataform div:last-child {
   display: grid;
@@ -686,6 +677,40 @@ body footer [class^="icon-social-"] {
 }
 body footer [class^="icon-social-"]:hover {
   background: #4bd0ff;
+}
+body .navbar .navbar-toggle:focus,
+body .navbar .navbar-toggle:hover {
+  background-color: transparent;
+}
+body .navbar .navbar-toggle {
+  border: none;
+}
+body .navbar-toggle span.icon-bar {
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+body .navbar-toggle span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+}
+body .navbar-toggle span:nth-child(3) {
+  opacity: 0;
+}
+body .navbar-toggle span:nth-child(4) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+          transform-origin: 10% 90%;
+}
+body .navbar-toggle.collapsed span:nth-child(2),
+body .navbar-toggle.collapsed span:nth-child(4) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+body .navbar-toggle.collapsed span:nth-child(3) {
+  opacity: 1;
 }
 
 /* Large desktops and laptops */
