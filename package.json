@@ -16,7 +16,7 @@
     "jshint": "^2.9.5"
   },
   "dependencies": {
-    "bootstrap": "^4.1.0",
+    "bootstrap": "^4.3.1",
     "fontawesome": "latest",
     "jquery": "^3.3.1",
     "jquery-parallax.js": "^1.5.0",
